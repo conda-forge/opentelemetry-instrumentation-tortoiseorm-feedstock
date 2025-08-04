@@ -2,7 +2,7 @@
 schema_version: 1
 context:
   name: opentelemetry-instrumentation-tortoiseorm
-  version: "0.56b0"
+  version: "0.57b0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_instrumentation_tortoiseorm-${{ version }}.tar.gz
-  sha256: 33aef569364533338e097f1b10c6d48acb0944040251f3626d1857d796851e48
+  sha256: 51d96a494e8442fe113ff2ef633f09921800a570a0c0d906ebcc3eee5f7a370c
 
 build:
   number: 0
