@@ -13,7 +13,7 @@ source:
   sha256: 51d96a494e8442fe113ff2ef633f09921800a570a0c0d906ebcc3eee5f7a370c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - conda-forge/opentelemetry-api
