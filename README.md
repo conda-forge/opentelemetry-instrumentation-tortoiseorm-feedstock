@@ -9,6 +9,10 @@ Package license: Apache-2.0
 
 Summary: OpenTelemetry Instrumentation for Tortoise ORM
 
+Development: https://github.com/open-telemetry/opentelemetry-python-contrib
+
+OpenTelemetry Instrumentation for Tortoise ORM
+
 Current build status
 ====================
 
@@ -16,7 +20,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/opentelemetry-instrumentation-tortoiseorm-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/opentelemetry-instrumentation-tortoiseorm-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
