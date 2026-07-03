@@ -1,16 +1,18 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
+
 context:
-  name: opentelemetry-instrumentation-tortoiseorm
-  version: "0.62b1"
+  version: "0.64b0"
 
 package:
-  name: ${{ name|lower }}
+  name: opentelemetry-instrumentation-tortoiseorm
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_instrumentation_tortoiseorm-${{ version }}.tar.gz
-  sha256: 08f7915f933a624d5321360442d37ad137bd68190a81a5a48ab1c690e4fe6bbd
+  url: 
+    https://pypi.org/packages/source/o/opentelemetry-instrumentation-tortoiseorm/opentelemetry_instrumentation_tortoiseorm-${{
+    version }}.tar.gz
+  sha256: 9108539712c554a567171ace27572b4a6304bc76d4d70eee1f50e94bb500989c
 
 build:
   number: 0
@@ -20,10 +22,10 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
     - pip
+    - hatchling
   run:
-    - python >=${{ python_min }},<4.0
+    - python >=${{ python_min }}
     - opentelemetry-api >=1.12,<2.dev0
     - opentelemetry-instrumentation ==${{ version }}
     - opentelemetry-semantic-conventions ==${{ version }}
@@ -36,13 +38,19 @@ tests:
         - opentelemetry
         - opentelemetry.instrumentation.tortoiseorm
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
-  summary: OpenTelemetry Instrumentation for Tortoise ORM
-  homepage: https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-tortoiseorm
+  homepage: 
+    https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-tortoiseorm
   license: Apache-2.0
   license_file: LICENSE
+  summary: OpenTelemetry Instrumentation for Tortoise ORM
+  description: |
+    OpenTelemetry Instrumentation for Tortoise ORM
+  repository: https://github.com/open-telemetry/opentelemetry-python-contrib
 
 extra:
   recipe-maintainers:
