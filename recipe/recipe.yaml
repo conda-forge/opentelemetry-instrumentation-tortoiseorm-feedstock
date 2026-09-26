@@ -2,17 +2,15 @@
 schema_version: 1
 
 context:
-  version: "0.64b0"
+  version: 0.66b0
 
 package:
   name: opentelemetry-instrumentation-tortoiseorm
   version: ${{ version }}
 
 source:
-  url: 
-    https://pypi.org/packages/source/o/opentelemetry-instrumentation-tortoiseorm/opentelemetry_instrumentation_tortoiseorm-${{
-    version }}.tar.gz
-  sha256: 9108539712c554a567171ace27572b4a6304bc76d4d70eee1f50e94bb500989c
+  url: https://pypi.org/packages/source/o/opentelemetry-instrumentation-tortoiseorm/opentelemetry_instrumentation_tortoiseorm-${{ version }}.tar.gz
+  sha256: fd79ed1eed027059018532d82226c6d0361125d6855cbba333ea16d2e63911da
 
 build:
   number: 0
@@ -29,9 +27,8 @@ requirements:
     - opentelemetry-api >=1.12,<2.dev0
     - opentelemetry-instrumentation ==${{ version }}
     - opentelemetry-semantic-conventions ==${{ version }}
-    - tortoise-orm >=0.17.0
-    - pydantic >=1.10.2
-
+    - opentelemetry-semantic-conventions ==0.66b0
+    - opentelemetry-instrumentation ==0.66b0
 tests:
   - python:
       imports:
@@ -40,11 +37,10 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
-  homepage: 
-    https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-tortoiseorm
+  homepage: https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-tortoiseorm
   license: Apache-2.0
   license_file: LICENSE
   summary: OpenTelemetry Instrumentation for Tortoise ORM
